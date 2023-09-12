@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AlgorithmBenchmark.CountingSortBenchmark-20230910-231959</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 11 (10.0.22621.2134/22H2/2022Update/SunValley2)
+AMD Ryzen 9 5900HX with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 7.0.306
+  [Host]     : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Size</th><th>Max </th><th>SortOrder</th><th>Mean  </th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>Sort</td><td>100000</td><td>100</td><td>None</td><td>1.200 ms</td><td>0.0237 ms</td><td>0.0354 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>100</td><td>Ascending</td><td>1.080 ms</td><td>0.0216 ms</td><td>0.0594 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>100</td><td>Descending</td><td>1.018 ms</td><td>0.0200 ms</td><td>0.0274 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>100000</td><td>None</td><td>1.633 ms</td><td>0.0283 ms</td><td>0.0237 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>100000</td><td>Ascending</td><td>1.190 ms</td><td>0.0166 ms</td><td>0.0138 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>100000</td><td>Descending</td><td>1.161 ms</td><td>0.0229 ms</td><td>0.0483 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>1000000</td><td>None</td><td>4.879 ms</td><td>0.2343 ms</td><td>0.6797 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>1000000</td><td>Ascending</td><td>2.789 ms</td><td>0.0535 ms</td><td>0.0751 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>1000000</td><td>Descending</td><td>2.778 ms</td><td>0.0332 ms</td><td>0.0294 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>2147483647</td><td>None</td><td>1,464.609 ms</td><td>27.0154 ms</td><td>25.2702 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>2147483647</td><td>Ascending</td><td>1,476.686 ms</td><td>27.0281 ms</td><td>25.2821 ms</td>
+</tr><tr><td>Sort</td><td>100000</td><td>2147483647</td><td>Descending</td><td>1,720.260 ms</td><td>50.4674 ms</td><td>144.8005 ms</td>
+</tr></tbody></table>
+</body>
+</html>

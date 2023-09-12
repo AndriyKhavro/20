@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>AlgorithmBenchmark.AvlTreeAddDeleteBenchmark-20230910-224328</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 11 (10.0.22621.2134/22H2/2022Update/SunValley2)
+AMD Ryzen 9 5900HX with Radeon Graphics, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 7.0.306
+  [Host]     : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method   </th><th>Size</th><th>Max </th><th>SortOrder</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>Insert</td><td>100000</td><td>100</td><td>None</td><td>5.278 ms</td><td>0.1044 ms</td><td>0.2155 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100</td><td>None</td><td>5.336 ms</td><td>0.1019 ms</td><td>0.1289 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>100</td><td>Ascending</td><td>3.372 ms</td><td>0.0662 ms</td><td>0.0991 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100</td><td>Ascending</td><td>6.774 ms</td><td>0.1342 ms</td><td>0.1697 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>100</td><td>Descending</td><td>3.036 ms</td><td>0.0586 ms</td><td>0.0761 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100</td><td>Descending</td><td>6.420 ms</td><td>0.1237 ms</td><td>0.1609 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>100000</td><td>None</td><td>23.697 ms</td><td>0.4731 ms</td><td>0.4858 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100000</td><td>None</td><td>45.832 ms</td><td>0.9156 ms</td><td>0.9797 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>100000</td><td>Ascending</td><td>13.998 ms</td><td>0.2784 ms</td><td>0.4575 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100000</td><td>Ascending</td><td>23.811 ms</td><td>0.4739 ms</td><td>0.6486 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>100000</td><td>Descending</td><td>10.577 ms</td><td>0.2007 ms</td><td>0.1971 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>100000</td><td>Descending</td><td>20.787 ms</td><td>0.4065 ms</td><td>0.6447 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>1000000</td><td>None</td><td>26.433 ms</td><td>0.5256 ms</td><td>0.6834 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>1000000</td><td>None</td><td>52.317 ms</td><td>0.9039 ms</td><td>0.8013 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>1000000</td><td>Ascending</td><td>14.815 ms</td><td>0.2887 ms</td><td>0.2700 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>1000000</td><td>Ascending</td><td>26.273 ms</td><td>0.4886 ms</td><td>0.4570 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>1000000</td><td>Descending</td><td>11.739 ms</td><td>0.2085 ms</td><td>0.1951 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>1000000</td><td>Descending</td><td>23.626 ms</td><td>0.4157 ms</td><td>0.3471 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>2147483647</td><td>None</td><td>27.200 ms</td><td>0.5158 ms</td><td>0.5519 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>2147483647</td><td>None</td><td>53.420 ms</td><td>1.0271 ms</td><td>1.2227 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>2147483647</td><td>Ascending</td><td>15.259 ms</td><td>0.3041 ms</td><td>0.3620 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>2147483647</td><td>Ascending</td><td>26.406 ms</td><td>0.5159 ms</td><td>0.6141 ms</td>
+</tr><tr><td>Insert</td><td>100000</td><td>2147483647</td><td>Descending</td><td>11.837 ms</td><td>0.2295 ms</td><td>0.2550 ms</td>
+</tr><tr><td>InsertAndDelete</td><td>100000</td><td>2147483647</td><td>Descending</td><td>23.136 ms</td><td>0.4437 ms</td><td>0.5770 ms</td>
+</tr></tbody></table>
+</body>
+</html>
