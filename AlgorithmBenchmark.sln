@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmBenchmark", "AlgorithmBenchmark.csproj", "{38503D4D-0085-4892-B8DC-65DCB5B9A0E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmBenchmark", "AlgorithmBenchmark\AlgorithmBenchmark.csproj", "{38503D4D-0085-4892-B8DC-65DCB5B9A0E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalancedSearchTree", "BalancedSearchTree\BalancedSearchTree.csproj", "{1DC27CB8-88E2-4487-85BB-2CFC1C5C2605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProfilerTest", "ProfilerTest\ProfilerTest.csproj", "{89A9D92A-74A7-4091-AB49-421610C775A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{38503D4D-0085-4892-B8DC-65DCB5B9A0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38503D4D-0085-4892-B8DC-65DCB5B9A0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38503D4D-0085-4892-B8DC-65DCB5B9A0E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC27CB8-88E2-4487-85BB-2CFC1C5C2605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC27CB8-88E2-4487-85BB-2CFC1C5C2605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC27CB8-88E2-4487-85BB-2CFC1C5C2605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC27CB8-88E2-4487-85BB-2CFC1C5C2605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A9D92A-74A7-4091-AB49-421610C775A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A9D92A-74A7-4091-AB49-421610C775A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A9D92A-74A7-4091-AB49-421610C775A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A9D92A-74A7-4091-AB49-421610C775A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

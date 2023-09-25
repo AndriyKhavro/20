@@ -1,4 +1,4 @@
-﻿namespace AlgorithmBenchmark;
+﻿namespace BalancedSearchTree;
 
 public class AvlTree<T> where T : IComparable<T>
 {
@@ -18,14 +18,27 @@ public class AvlTree<T> where T : IComparable<T>
 
     private Node? _root;
 
+    public AvlTree()
+    {
+        
+    }
+
+    public AvlTree(IEnumerable<T> data)
+    {
+        foreach (var item in data)
+        {
+            Insert(item);
+        }
+    }
+
     public void Insert(T data)
     {
-        _root = Insert(_root, data);
+        _root = InsertInternal(_root, data);
     }
 
     public void Delete(T data)
     {
-        _root = Delete(_root, data);
+        _root = DeleteInternal(_root, data);
     }
 
     public bool Contains(T data)
@@ -33,15 +46,15 @@ public class AvlTree<T> where T : IComparable<T>
         return Find(_root, data) != null;
     }
 
-    private Node? Insert(Node? node, T data)
+    private Node? InsertInternal(Node? node, T data)
     {
         if (node == null)
             return new Node(data);
 
         if (data.CompareTo(node.Data) < 0)
-            node.Left = Insert(node.Left, data);
+            node.Left = InsertInternal(node.Left, data);
         else if (data.CompareTo(node.Data) > 0)
-            node.Right = Insert(node.Right, data);
+            node.Right = InsertInternal(node.Right, data);
         else // Duplicate data not allowed
             return node;
 
@@ -52,7 +65,7 @@ public class AvlTree<T> where T : IComparable<T>
         return Balance(node);
     }
 
-    private Node? Delete(Node? node, T data)
+    private Node? DeleteInternal(Node? node, T data)
     {
         if (node == null)
             return null;
@@ -62,10 +75,10 @@ public class AvlTree<T> where T : IComparable<T>
         switch (compareResult)
         {
             case < 0:
-                node.Left = Delete(node.Left, data);
+                node.Left = DeleteInternal(node.Left, data);
                 break;
             case > 0:
-                node.Right = Delete(node.Right, data);
+                node.Right = DeleteInternal(node.Right, data);
                 break;
             default:
             {
@@ -78,7 +91,7 @@ public class AvlTree<T> where T : IComparable<T>
                 node.Data = MinValue(node.Right);
 
                 // Delete the inorder successor
-                node.Right = Delete(node.Right, node.Data);
+                node.Right = DeleteInternal(node.Right, node.Data);
                 break;
             }
         }

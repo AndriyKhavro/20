@@ -1,4 +1,5 @@
-﻿using BenchmarkDotNet.Attributes;
+﻿using BalancedSearchTree;
+using BenchmarkDotNet.Attributes;
 
 namespace AlgorithmBenchmark;
 
